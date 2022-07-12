@@ -908,6 +908,8 @@ footer {
 // footer 
 
 
+
+
 // Abouthtml 
 // company 
 .company {
@@ -960,12 +962,12 @@ footer {
 
 
 // transform
-.transform{
+.transform {
     width: 100%;
     height: auto;
-    // background-color: #20ad96;
     margin-bottom: 100px;
-    .transform-title{
+
+    .transform-title {
         max-width: 1290px;
         margin: auto;
         display: flex;
@@ -973,39 +975,154 @@ footer {
         justify-content: center;
         align-items: center;
         padding: 50px 30px;
-        h3{
+
+        h3 {
             font-size: 1.6rem;
             color: $text-lite-color;
             padding-bottom: 10px;
         }
-        h2{
+
+        h2 {
             font-size: 4rem;
             padding-bottom: 20px;
             color: #333461;
         }
-        p{
+
+        p {
             font-size: 1.8rem;
             width: 80%;
             margin: auto;
             text-align: center;
-            color: $text-lite-color;
+            color: #111;
         }
     }
-    .transform-container{
+
+    .transform-container {
         max-width: 1290px;
         margin: auto;
-        padding: 0 30px;
-        background-color: $btn-color;
-        .transform-box{
-            background-color: #333461;
+        padding: 0px 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        justify-content: center;
+        align-items: center;
+
+        // background-color: #20ad96;
+        .transform-box {
+            background-color: #fff;
+            padding: 50px 10px;
+            text-align: center;
+
+            img {
+                padding-bottom: 15px;
+                width: 35px;
+            }
+
+            h3 {
+                font-size: 2rem;
+                padding-bottom: 10px;
+                text-align: center;
+            }
+
+            p {
+                font-size: 1.6rem;
+                line-height: 25px;
+                text-align: center;
+                color: #333461;
+            }
         }
     }
 }
+
 // transform
+
+// Ask
+.ask {
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+
+    .ask-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        padding: 50px 30px;
+
+        h2 {
+            font-size: 4rem;
+            color: $text-color;
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: #111;
+        }
+    }
+
+    .ask-container {
+        max-width: 1290px;
+        margin: auto;
+
+        .faq {
+            width: 90%;
+            margin: auto;
+            padding: 15px 0px;
+            border-bottom: 1px solid rgba($color: #000000, $alpha: 0.3);
+
+            .questions {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                // padding: 10px;
+                margin-bottom: 10px;
+
+                h2 {
+                    font-size: 1.8rem;
+                }
+
+                i {
+                    font-size: 1.8rem;
+                    cursor: pointer;
+                }
+            }
+
+            .ans {
+                font-family: sans-serif;
+                max-height: 0;
+                overflow: hidden;
+
+
+                p {
+                    font-size: 1.6rem;
+                    line-height: 30px;
+                    padding: 10px 0px;
+                }
+            }
+        }
+    }
+
+    .faq.active .ans {
+        max-height: 100%;
+    }
+
+    .faq.active h2 {
+        color: #20ad96;
+
+    }
+
+    .faq.active i {
+        transform: rotate(-180deg);
+        transition: 0.5s ease;
+        color: #20ad96;
+    }
+}
+
+// Ask
 
 // question 
 .question {
-    // background-color: #20ad96;
     margin-bottom: 100px;
 
     .question-container {
@@ -1122,6 +1239,10 @@ footer {
             padding: 30px 0px;
         }
     }
+
+    hr {
+        width: 95%;
+    }
 }
 
 @media (max-width: 992px) {
@@ -1187,6 +1308,18 @@ footer {
     .company {
         .company-container {
             grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
+    .transform {
+        .transform-title {
+            h2 {
+                text-align: center;
+            }
+        }
+
+        .transform-container {
+            grid-template-columns: 1fr 1fr;
         }
     }
 
@@ -1424,7 +1557,7 @@ footer {
         }
 
         .testimonial-container {
-            padding: 30px 10px;
+            padding: 30px 0px;
 
             .swiper-content {
                 p {
@@ -1521,7 +1654,7 @@ footer {
 
             .onlinebox-left {
                 h2 {
-                    font-size: 3rem;
+                    font-size: 2.5rem;
                 }
 
                 p {
@@ -1551,10 +1684,12 @@ footer {
             .notifiedbox-left {
                 h2 {
                     font-size: 2.5rem;
+                    // text-align: center;
                 }
 
                 p {
                     font-size: 1.4rem;
+                    // text-align: center;
                 }
             }
 
@@ -1636,11 +1771,12 @@ footer {
     }
 
     .company {
-        .company-title{
-            p{
+        .company-title {
+            p {
                 font-size: 1.4rem;
             }
         }
+
         .company-container {
             grid-template-columns: 1fr 1fr 1fr;
             padding: 30px 20px;
@@ -1648,6 +1784,71 @@ footer {
             .company-box {
                 img {
                     width: 80px;
+                }
+            }
+        }
+    }
+
+    .transform {
+        .transform-title {
+            padding: 50px 20px;
+
+            h2 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+                line-height: 25px;
+                width: 100%;
+            }
+        }
+
+        .transform-container {
+            grid-template-columns: 1fr;
+            grid-gap: 0px;
+            padding: 0 20px;
+
+            .transform-box {
+                padding: 30px 20px;
+
+                h3 {
+                    font-size: 1.8rem;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+
+    .ask {
+        .ask-title {
+            padding: 50px 20px;
+
+            h2 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+                text-align: center;
+            }
+        }
+        .ask-container{
+            .faq {
+                padding: 30px 0px;
+    
+                .questions {
+                    h2 {
+                        font-size: 1.6rem;
+                    }
+                }
+                .ans{
+                    p{
+                        font-size: 1.4rem;
+                    }
                 }
             }
         }

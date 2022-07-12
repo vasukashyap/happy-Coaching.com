@@ -800,16 +800,103 @@ footer .footer-bottom ul li i {
   width: 80%;
   margin: auto;
   text-align: center;
-  color: #b6b1c4;
+  color: #111;
 }
 .transform .transform-container {
   max-width: 1290px;
   margin: auto;
-  padding: 0 30px;
-  background-color: #20ad96;
+  padding: 0px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 .transform .transform-container .transform-box {
-  background-color: #333461;
+  background-color: #fff;
+  padding: 50px 10px;
+  text-align: center;
+}
+.transform .transform-container .transform-box img {
+  padding-bottom: 15px;
+  width: 35px;
+}
+.transform .transform-container .transform-box h3 {
+  font-size: 2rem;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.transform .transform-container .transform-box p {
+  font-size: 1.6rem;
+  line-height: 25px;
+  text-align: center;
+  color: #333461;
+}
+
+.ask {
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+}
+.ask .ask-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 50px 30px;
+}
+.ask .ask-title h2 {
+  font-size: 4rem;
+  color: #333461;
+}
+.ask .ask-title p {
+  font-size: 1.6rem;
+  color: #111;
+}
+.ask .ask-container {
+  max-width: 1290px;
+  margin: auto;
+}
+.ask .ask-container .faq {
+  width: 90%;
+  margin: auto;
+  padding: 15px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.ask .ask-container .faq .questions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.ask .ask-container .faq .questions h2 {
+  font-size: 1.8rem;
+}
+.ask .ask-container .faq .questions i {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.ask .ask-container .faq .ans {
+  font-family: sans-serif;
+  max-height: 0;
+  overflow: hidden;
+}
+.ask .ask-container .faq .ans p {
+  font-size: 1.6rem;
+  line-height: 30px;
+  padding: 10px 0px;
+}
+.ask .faq.active .ans {
+  max-height: 100%;
+}
+.ask .faq.active h2 {
+  color: #20ad96;
+}
+.ask .faq.active i {
+  transform: rotate(-180deg);
+  transition: 0.5s ease;
+  color: #20ad96;
 }
 
 .question {
@@ -897,6 +984,9 @@ footer .footer-bottom ul li i {
   .testimonial .testimonial-container {
     padding: 30px 0px;
   }
+  hr {
+    width: 95%;
+  }
 }
 @media (max-width: 992px) {
   header .navbar {
@@ -939,6 +1029,12 @@ footer .footer-bottom ul li i {
   }
   .company .company-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .transform .transform-title h2 {
+    text-align: center;
+  }
+  .transform .transform-container {
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media (max-width: 768px) {
@@ -1082,7 +1178,7 @@ footer .footer-bottom ul li i {
     font-size: 3rem;
   }
   .testimonial .testimonial-container {
-    padding: 30px 10px;
+    padding: 30px 0px;
   }
   .testimonial .testimonial-container .swiper-content p {
     width: 90%;
@@ -1142,7 +1238,7 @@ footer .footer-bottom ul li i {
     padding-top: 20px;
   }
   .online-session .online-container .onlinebox-left h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .online-session .online-container .onlinebox-left p {
     font-size: 1.4rem;
@@ -1215,5 +1311,49 @@ footer .footer-bottom ul li i {
   }
   .company .company-container .company-box img {
     width: 80px;
+  }
+  .transform .transform-title {
+    padding: 50px 20px;
+  }
+  .transform .transform-title h2 {
+    font-size: 3rem;
+  }
+  .transform .transform-title p {
+    font-size: 1.4rem;
+    line-height: 25px;
+    width: 100%;
+  }
+  .transform .transform-container {
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+    padding: 0 20px;
+  }
+  .transform .transform-container .transform-box {
+    padding: 30px 20px;
+  }
+  .transform .transform-container .transform-box h3 {
+    font-size: 1.8rem;
+  }
+  .transform .transform-container .transform-box p {
+    font-size: 1.4rem;
+  }
+  .ask .ask-title {
+    padding: 50px 20px;
+  }
+  .ask .ask-title h2 {
+    font-size: 3rem;
+  }
+  .ask .ask-title p {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .ask .ask-container .faq {
+    padding: 30px 0px;
+  }
+  .ask .ask-container .faq .questions h2 {
+    font-size: 1.6rem;
+  }
+  .ask .ask-container .faq .ans p {
+    font-size: 1.4rem;
   }
 }/*# sourceMappingURL=main.css.map */
